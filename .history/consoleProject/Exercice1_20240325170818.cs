@@ -9,7 +9,7 @@ namespace consoleProject
         public static void tempConverter(){
             Console.Write("Ecrivez la temperature: ");
            int temp = Convert.ToInt32(Console.ReadLine());
-           Console.WriteLine((temp*1.8f)+32 + "°F");
+           Console.WriteLine((temp*1.8f)+32);
         }
         //Exo 2
         public static int moyenneCalculator(float a, float b, float c){

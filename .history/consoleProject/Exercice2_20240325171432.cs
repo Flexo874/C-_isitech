@@ -14,7 +14,6 @@ namespace consoleProject
         }
         //Exo 2
         
-        
         //Exo 3
         public static void determineNum (int i){
             if (i < 0) Console.WriteLine("Le nombre est négatif");

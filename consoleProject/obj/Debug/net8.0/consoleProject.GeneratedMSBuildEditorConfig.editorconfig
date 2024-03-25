@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = consoleProject
-build_property.ProjectDir = C:\Users\felix\Documents\Projet C# isitech\consoleProject\
+build_property.ProjectDir = C:\Users\felix\Documents\GitHub\test\C-_isitech\consoleProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

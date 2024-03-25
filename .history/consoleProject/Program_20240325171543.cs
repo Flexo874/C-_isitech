@@ -39,7 +39,8 @@ class Program
         {
             Console.WriteLine("You can drive");
         }*/
-      
+      string str = "azerty";
+       Console.Write(Exercices2.firstSecondChar(str));
    
 
 

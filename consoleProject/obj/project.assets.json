@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felix\\Documents\\Projet C# isitech\\consoleProject\\consoleProject.csproj",
+      "projectUniqueName": "C:\\Users\\felix\\Documents\\GitHub\\test\\C-_isitech\\consoleProject\\consoleProject.csproj",
       "projectName": "consoleProject",
-      "projectPath": "C:\\Users\\felix\\Documents\\Projet C# isitech\\consoleProject\\consoleProject.csproj",
+      "projectPath": "C:\\Users\\felix\\Documents\\GitHub\\test\\C-_isitech\\consoleProject\\consoleProject.csproj",
       "packagesPath": "C:\\Users\\felix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felix\\Documents\\Projet C# isitech\\consoleProject\\obj\\",
+      "outputPath": "C:\\Users\\felix\\Documents\\GitHub\\test\\C-_isitech\\consoleProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\felix\\AppData\\Roaming\\NuGet\\NuGet.Config",

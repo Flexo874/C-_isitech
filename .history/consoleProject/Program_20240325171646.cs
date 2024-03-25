@@ -39,7 +39,7 @@ class Program
         {
             Console.WriteLine("You can drive");
         }*/
-      
+      Exercices1.isPair(5);
    
 
 

@@ -1,26 +1,31 @@
-using consoleProject;
 using System;
+
+
 namespace consoleProject
 {
-	public static class Utils
+	static class Pendu
 	{
-		public static bool letterCheck (string word,char c)
-		{
-			if(word.Contains(c))return true;
-			return false;	
-		}
-
-		public static void printWord (char[] arr)
-		{
-			for(int i = 0 ; i<arr.Length ;i++)
-				Console.Write(arr[i]);
-		}
 		
 		
 		
-		
-		
-		public static void printCase8()
+			public static void pendu()
+			{
+				Console.WriteLine("-------------------------------------");
+			Console.WriteLine("          Voici le pendu!      ");
+			//L'utilisateur chosit en combien de tours il veut jouer
+			Console.Write("Veuillez choisir un nombre de tours limite : ");
+			int lap = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("-------------------------------------");
+			
+			
+			
+			
+			
+			}
+			
+			
+			
+			public static void printCase7()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -36,7 +41,7 @@ namespace consoleProject
 				Console.WriteLine("==========");
 			}
 			
-			public static void printCase7()
+			public static void printCase6()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -52,7 +57,7 @@ namespace consoleProject
 				Console.WriteLine("==========");
 			}
 			
-			public static void printCase6()
+			public static void printCase5()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -67,7 +72,7 @@ namespace consoleProject
 				Console.WriteLine("||           ");
 				Console.WriteLine("==========");
 			}
-			public static void printCase5()
+			public static void printCase4()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -82,7 +87,7 @@ namespace consoleProject
 				Console.WriteLine("||           ");
 				Console.WriteLine("==========");
 			}
-			public static void printCase4()
+			public static void printCase3()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -97,7 +102,7 @@ namespace consoleProject
 				Console.WriteLine("||           ");
 				Console.WriteLine("==========");
 			}
-			public static void printCase3()
+			public static void printCase2()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -112,7 +117,7 @@ namespace consoleProject
 				Console.WriteLine("||           ");
 				Console.WriteLine("==========");
 			}
-			public static void printCase2()
+			public static void printCase1()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -128,7 +133,7 @@ namespace consoleProject
 				Console.WriteLine("==========");
 			}
 			
-			public static void printCase1()
+			public static void printCase0()
 			{
 				Console.WriteLine("============");
 				Console.WriteLine("|| //    |");
@@ -144,24 +149,45 @@ namespace consoleProject
 				Console.WriteLine("==========");
 			}
 			
-			public static void printCase0()
-			{
-				Console.WriteLine("============");
-				Console.WriteLine("|| //");
-				Console.WriteLine("||//");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("||");
-				Console.WriteLine("==========");
-			}
+			
+			
+			
+		
 	}
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+	============
+	|| //    |
+	||//     |
+	||/      |
+	||       O
+	||      /|\
+	||       |
+	||      / \
+	||
+	||
+	||
+	==========
+
+*/

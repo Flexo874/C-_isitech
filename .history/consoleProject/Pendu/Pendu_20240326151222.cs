@@ -15,7 +15,7 @@ namespace consoleProject
 				int round = 0;
 				string[] word = ["apple", "banana", "carrot", "date", "egg", "fig", "grape", "honey", "kiwi", "lemon", "mango", "nut", "orange", "pear", "quince", "raspberry", "strawberry", "tangerine", "udon", "vanilla", "watermelon", "xigua", "yam", "zucchini"];
 				Random rdn = new Random();
-				string wordToFind = word[rdn.Next(0,word.Length)]; 
+				string wordToFind = word[rdn.Next(0,word.Count)]; 
 				char[] arr = new char[wordToFind.Length];
 				Utils.printCase1();
 				Console.Write("Le mot a trouver est : ");

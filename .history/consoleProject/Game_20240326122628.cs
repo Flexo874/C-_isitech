@@ -47,8 +47,8 @@ namespace consoleProject
 							return;
 					}
 					Console.WriteLine("-------------------------------------");	
+					Console.Write("Le nombre a deviner etait {0}", toFind);
 			}
-			Console.Write("Le nombre a deviner etait {0}", toFind);
 		}
 		
 		//Fontion qui renvoie soit 0, 1 ou 2 en fonction si le chiffre donné par l'utilisateur est inferieur, superieur ou egal a celui de la machine

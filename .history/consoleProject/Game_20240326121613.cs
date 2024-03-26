@@ -20,33 +20,30 @@ namespace consoleProject
 			
 			while(lap >= 0)
 			{
-					//donne le nombre de tours restant et soustrait un tour a chaque bloucle
-					Console.Write("Il vous reste {0} tours !",lap);
-					lap--;
-					//demander a l'utilisateur de choisir un nombre et le convertit en int
-					Console.Write("Veuillez choisir un nombre entre 0 et 10000 : ");
-					string str = Console.ReadLine()!;
-					if(str == "q")return; // si lutilisateur saisi q alors quitte le jeu
+				//donne le nombre de tours restant et soustrait un tour a chaque bloucle
+				Console.Write("Il vous reste {0} tours !",lap);
+				lap--;
+				//demander a l'utilisateur de choisir un nombre et le convertit en int
+				Console.Write("Veuillez choisir un nombre entre 0 et 10000 : ");
+				int i = Convert.ToInt32(Console.ReadLine());
 				
-					int i = Convert.ToInt32(str);
-					
-					//nouvelle variable qui prends en charge les cas donnés par la fonction checkNumber
-					int isFound = checkNumber(i , toFind);
-					
-					//Switch qui compare les cas 0, 1, 2 et ecrit en fonction du resultat si c'est plus/moins/gagné
-					switch(isFound)
-					{
-						case  0 :
-							Console.WriteLine("C'est plus !");
-							break;
-						case  2 : 
-							Console.WriteLine("C'est moins !");
-							break;
-						default :
-							Console.WriteLine("C'est gagné");
-							return;
-					}
-					Console.WriteLine("-------------------------------------");	
+				//nouvelle variable qui prends en charge les cas donnés par la fonction checkNumber
+				int isFound = checkNumber(i , toFind);
+				
+				//Switch qui compare les cas 0, 1, 2 et ecrit en fonction du resultat si c'est plus/moins/gagné
+				switch(isFound)
+				{
+					case  0 :
+						Console.WriteLine("C'est plus !");
+						break;
+					case  2 : 
+						Console.WriteLine("C'est moins !");
+						break;
+					default :
+						Console.WriteLine("C'est gagné");
+						return;
+				}
+				Console.WriteLine("-------------------------------------");	
 			}
 			Console.Write("Le nombre a deviner etait {0}", toFind);
 		}
@@ -69,8 +66,6 @@ namespace consoleProject
 			tant que lap >= 0 :
 				lap - 1
 				variable i = demande utilisateur de choisir un nombre
-				si i == "q"
-					alors quitter
 				si i < rnd
 					ecrire "c'est moins"
 				alors si i>rnd

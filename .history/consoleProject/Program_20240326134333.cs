@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {  
-        Game.justPrice();
+        Console.WriteLine(Exercices.ReverseString("aabbccdd"));
         
 
 

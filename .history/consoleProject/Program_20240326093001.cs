@@ -40,8 +40,8 @@ class Program
             Console.WriteLine("You can drive");
         }*/
       
-        Exercices1.tempConverter();
-        
+        int[] test = [1,2,3,4,5,6,7,8,9];
+        Exercices2.randomizer(test);
 
 
         

@@ -13,32 +13,15 @@ namespace consoleProject
             return result;
         }
         //Exo 2
-        public static void printArr(int[] tab){
-            for(int i = 0; i<tab.Length ;i++)
+        public static void printTab(int[] tab){
+            for(int i = 0; i<tab.Length ;i++){
                 Console.Write("{0} ", tab[i]);
+            }
             Console.WriteLine();
         }
-       
-        public static int[] randomizerArr(int[] tab){
-            int[] result = new int[tab.Length] ;
-            bool[] check = new bool[tab.Length];
-            Random rdm = new Random();
-            int a;
-            for(int i = 0 ; i < tab.Length; i++)
-                check[i]=true;
-
-            for(int i = 0 ; i < tab.Length;i++){
-                a = rdm.Next(0,tab.Length);
-
-                while(!check[a])
-                    a = rdm.Next(0,tab.Length) ;
-
-                check[a] = false;
-                result[i] = tab[a];
-            }
-            printArr(result);
-            return result;
-        }   
+        public static int[] randomizer(int[] tab){
+            
+        }
         
         //Exo 3
         public static void determineNum (int i){

@@ -6,7 +6,7 @@ namespace consoleProject
     static class Exercices
     {
         //Exo 1
-        public static bool isInArray (int[] tab, int n)
+        public static bool isInTab (int[] tab, int n)
         {
             for(int i =0; i < tab.Length-1; i++){
                 if (tab[i] == n)
@@ -31,7 +31,7 @@ namespace consoleProject
 
         //Exo 3
 
-        public static int voyelleCounter(string str){
+        public static int voyelleCompteur(string str){
             int counter = 0;
            foreach(char c in str){
             if (c=='a' || c=='e' || c=='i' || c=='o'|| c=='u' || c=='y' || c=='A' || c=='E' || c=='I' || c=='O'|| c=='U' || c=='Y')
@@ -41,7 +41,7 @@ namespace consoleProject
         }
         //Exo 4
 
-        public static int sumIntArray (int[] tab){
+        public static int sumTab (int[] tab){
             int sum = 0;
             foreach(int i in tab)
                 sum+=i;
@@ -50,12 +50,14 @@ namespace consoleProject
 
         //Exo5
 
-        public static int maxIntArray (int[] tab){
+        public static int maxTab (int[] tab){
             int max = int.MinValue;
             for(int i = 0; i < tab.Length ; i++)
             {
                 if(tab[i] > max )
+                {
                     max = tab[i];
+                }
             }
             return max;
         }

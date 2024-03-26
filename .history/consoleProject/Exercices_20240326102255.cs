@@ -55,7 +55,9 @@ namespace consoleProject
             for(int i = 0; i < tab.Length ; i++)
             {
                 if(tab[i] > max )
+                {
                     max = tab[i];
+                }
             }
             return max;
         }

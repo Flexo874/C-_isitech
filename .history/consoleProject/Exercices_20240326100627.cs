@@ -41,7 +41,7 @@ namespace consoleProject
         }
         //Exo 4
 
-        public static int sumIntArray (int[] tab){
+        public static int sumArray (int[] tab){
             int sum = 0;
             foreach(int i in tab)
                 sum+=i;
@@ -50,12 +50,14 @@ namespace consoleProject
 
         //Exo5
 
-        public static int maxIntArray (int[] tab){
+        public static int maxInt (int[] tab){
             int max = int.MinValue;
             for(int i = 0; i < tab.Length ; i++)
             {
                 if(tab[i] > max )
+                {
                     max = tab[i];
+                }
             }
             return max;
         }

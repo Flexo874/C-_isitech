@@ -50,7 +50,7 @@ namespace consoleProject
 
         //Exo5
 
-        public static int maxInArray (int[] tab){
+        public static int maxIntArray (int[] tab){
             int max = int.MinValue;
             for(int i = 0; i < tab.Length ; i++)
             {

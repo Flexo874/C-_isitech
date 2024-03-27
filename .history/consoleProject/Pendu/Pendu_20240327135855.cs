@@ -10,7 +10,7 @@ namespace consoleProject
 	{
 			public static void penduGame()
 			{
-				int count =0;
+				
 				Console.WriteLine("             Le Pendu !      ");
 				//L'utilisateur chosit en combien de tours il veut jouer
 				
@@ -38,7 +38,6 @@ namespace consoleProject
 				
 				while(round >= 0)
 				{
-					count++;
 					Console.WriteLine("Le mot a trouver est : {0} ",new string (guessedWord));
 					Console.WriteLine("Il vous reste {0}/8 chances !",round);
 					
@@ -53,6 +52,7 @@ namespace consoleProject
 					
 					if(Utils.ContainsLetter(wordToFind.ToCharArray(),c)) //check si  la lettre est dans le mot ou pas
 					{
+						Console.WriteLine("Vous avez trouvé une lettre ! Bravo !");
 						for(int a = 0 ; a < wordToFind.Length ; a++)
 						{
 							if(wordToFind[a] == c)
@@ -98,11 +98,6 @@ namespace consoleProject
 								Utils.printCase1();
 								break;							
 						}
-					if(new string(guessedWord) == wordToFind)
-					{
-						Console.WriteLine("Felicitations ! Vous avez gagné !\n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);
-						return;
-					}	
 					
 					
 						

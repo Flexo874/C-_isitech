@@ -98,9 +98,9 @@ namespace consoleProject
 								Utils.printCase1();
 								break;							
 						}
-					if(new string(guessedWord) == wordToFind)
+					if(guessedWord.ToString() == wordToFind)
 					{
-						Console.WriteLine("Felicitations ! Vous avez gagné !\n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);
+						Console.WriteLine("Felicitations ! Vous avez gagné ! \n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);
 						return;
 					}	
 					

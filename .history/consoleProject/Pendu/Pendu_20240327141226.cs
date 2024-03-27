@@ -53,6 +53,7 @@ namespace consoleProject
 					
 					if(Utils.ContainsLetter(wordToFind.ToCharArray(),c)) //check si  la lettre est dans le mot ou pas
 					{
+						Console.WriteLine("Vous avez trouvé une lettre ! Bravo !");
 						for(int a = 0 ; a < wordToFind.Length ; a++)
 						{
 							if(wordToFind[a] == c)
@@ -98,9 +99,9 @@ namespace consoleProject
 								Utils.printCase1();
 								break;							
 						}
-					if(new string(guessedWord) == wordToFind)
+					if(guessedWord.ToString()!.Equals(wordToFind))
 					{
-						Console.WriteLine("Felicitations ! Vous avez gagné !\n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);
+						Console.WriteLine("Felicitations ! Vous avez gagné ! \n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);
 						return;
 					}	
 					

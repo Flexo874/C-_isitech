@@ -8,7 +8,8 @@ class Program
 {
 	static void Main(string[] args)
 	{  
-		Game.justPrice();
+		while(int.TryParse(Console.ReadLine(),out int lap));
+		
 		
 
 

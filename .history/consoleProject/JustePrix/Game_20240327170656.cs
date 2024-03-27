@@ -15,7 +15,7 @@ namespace consoleProject
 			Console.WriteLine("------------------------------------------------------------");
 			Console.WriteLine("          Voici le juste prix        ");
 			//L'utilisateur chosit en combien de tours il veut jouer
-			
+			Console.Write("Veuillez choisir un nombre de tours limite : ");
 			int lap = GetInput();
 			Console.WriteLine("------------------------------------------------------------");
 			
@@ -65,7 +65,7 @@ namespace consoleProject
 		}
 		
 		
-			public static void reloadask() //Fonction pour  revenir au début de la partie sans fermer
+			public static void reloadask()
 		{
 			Console.Write("Voulez-vous rejouer ? O/n: ");
 			string ans = Console.ReadLine()!;
@@ -77,9 +77,9 @@ namespace consoleProject
 		{
 			while(true)
 			{
-				Console.Write("Veuillez choisir un nombre de tours limite : ");
-				
-				if (!int.TryParse(Console.ReadLine(),out int lap) || lap < 0)
+				Console.Write("Veuillez saisir un nombre : ");
+				char[] letter = Console.ReadLine()!.ToCharArray();
+				if (!int.TryParse(Console.ReadLine(),out int lap) && lap < 0)
 					{
 						Console.WriteLine("Veuillez saisir un nombre valide !");
 						Console.ReadKey();

@@ -7,7 +7,6 @@ namespace consoleProject
 	{
 		public static void justPrice()
 		{
-			Console.Clear();
 			//créée un nombre au hasard entre 0 et 10000
 			Random rnd = new Random();
 			int toFind = rnd.Next(0,10001);
@@ -15,8 +14,8 @@ namespace consoleProject
 			Console.WriteLine("------------------------------------------------------------");
 			Console.WriteLine("          Voici le juste prix        ");
 			//L'utilisateur chosit en combien de tours il veut jouer
-			
-			int lap = GetInput();
+			Console.Write("Veuillez choisir un nombre de tours limite : ");
+			int lap = Convert.ToInt32(Console.ReadLine());
 			Console.WriteLine("------------------------------------------------------------");
 			
 			while(lap > 0)
@@ -52,7 +51,7 @@ namespace consoleProject
 						Console.Error.WriteLine("Veuillez saisir un nombre valide !");
 					
 			}
-			Console.WriteLine("Le nombre a deviner etait {0}", toFind);
+			Console.Write("Le nombre a deviner etait {0}", toFind);
 			reloadask();
 		}
 		
@@ -65,28 +64,12 @@ namespace consoleProject
 		}
 		
 		
-			public static void reloadask() //Fonction pour  revenir au début de la partie sans fermer
+			public static void reloadask()
 		{
 			Console.Write("Voulez-vous rejouer ? O/n: ");
 			string ans = Console.ReadLine()!;
 			if (ans.ToLower()=="o") justPrice();
 			else Environment.Exit(0);
-		}
-		
-		public static int GetInput()
-		{
-			while(true)
-			{
-				Console.Write("Veuillez choisir un nombre de tours limite : ");
-				
-				if (!int.TryParse(Console.ReadLine(),out int lap) || lap < 0)
-					{
-						Console.WriteLine("Veuillez saisir un nombre valide !");
-						Console.ReadKey();
-						continue;
-					}
-				else return lap;
-			}
 		}
 		
 		

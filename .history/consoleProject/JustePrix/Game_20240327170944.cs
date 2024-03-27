@@ -65,7 +65,7 @@ namespace consoleProject
 		}
 		
 		
-			public static void reloadask() //Fonction pour  revenir au début de la partie sans fermer
+			public static void reloadask()
 		{
 			Console.Write("Voulez-vous rejouer ? O/n: ");
 			string ans = Console.ReadLine()!;

@@ -1,0 +1,18 @@
+Pseudo code :
+		  
+			variable rnd = nombre aleatoire entre 0 et 10000
+			variable lap = demande utilisateur combien de tours
+			
+			tant que lap >= 0 :
+				lap - 1
+				variable i = demande utilisateur de choisir un nombre
+				si i == "q"
+					alors quitter
+				si i < rnd
+					ecrire "c'est moins"
+				alors si i>rnd
+					ecrrire "c'est plus"
+				sinon 
+					ecrire c'est gagner
+					fin tant que
+			fin tant que	

@@ -1,0 +1,28 @@
+Pseudo code :
+		  
+			variable rnd = nombre aleatoire entre 0 et 10000
+			variable lap = demande utilisateur combien de tours
+			
+			
+			tant que lap >= 0 :
+				
+				variable i = demande utilisateur de choisir un nombre
+				si i == "q"
+					alors quitter
+
+				si i < 10000 et i > 0 et i est un nombre alors
+					lap = lap - 1
+					si i < rnd
+						print "c'est moins"
+					alors si i>rnd
+						print "c'est plus"
+					sinon 
+						print "c'est gagner"
+						fin tant que
+						fin du programme 
+				sinon
+					print "saisir un nomrbe valide"		
+			fin tant que	
+
+
+		

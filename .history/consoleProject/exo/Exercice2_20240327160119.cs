@@ -16,14 +16,9 @@ namespace consoleProject
 		}
 		//Exo 2
 		public static void printArr(int[] tab){
-			Console.Write("[ ");
 			for(int i = 0; i<tab.Length ;i++)
-			{
-				if(i != tab.Length -1 ) Console.Write(tab[i] + ", ");
-				else Console.Write(tab[i]);
-			}
-			Console.WriteLine(" ]");
-			
+				Console.Write("{0} ", tab[i]);
+			Console.WriteLine();
 		}
 	   
 		public static int[] randomizerArr(int[] tab){
@@ -36,9 +31,9 @@ namespace consoleProject
 
 			for(int i = 0 ; i < tab.Length;i++)
 			{
-				a = rdm.Next(tab.Length);
+				a = rdm.Next(0,tab.Length);
 				while(!check[a])
-					a = rdm.Next(tab.Length) ;
+					a = rdm.Next(0,tab.Length) ;
 				check[a] = false;
 				result[i] = tab[a];
 			}

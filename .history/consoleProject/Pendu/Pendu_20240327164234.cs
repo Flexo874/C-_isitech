@@ -55,6 +55,8 @@ namespace consoleProject
 							{
 								guessedWord[a]=c;
 							}
+								
+								
 						}
 						Console.WriteLine("Vous avez trouvé une lettre ! Bravo !");	
 					}

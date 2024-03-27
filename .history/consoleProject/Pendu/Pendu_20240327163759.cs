@@ -36,7 +36,7 @@ namespace consoleProject
 				{
 					count++;																	//On augment le tours passés
 					Console.WriteLine("Le mot a trouver est : {0} ",new string (guessedWord));
-					Console.WriteLine("Il vous reste {0}/7 chances !",round-1);
+					Console.WriteLine("Il vous reste {0}/8 chances !",round);
 					
 					char c = Utils.GetInput();													//On obtient la lettre tapée par l'utilisateur
 					
@@ -55,6 +55,8 @@ namespace consoleProject
 							{
 								guessedWord[a]=c;
 							}
+								
+								
 						}
 						Console.WriteLine("Vous avez trouvé une lettre ! Bravo !");	
 					}
@@ -68,8 +70,7 @@ namespace consoleProject
 							case 1 :
 								Utils.printCase8();
 								Console.WriteLine("C'est perdu ! Dommage. Le mot était {0} !",wordToFind); 
-								Utils.reloadask();
-								break;
+								return;
 							case 2 :
 								Utils.printCase7();
 								break;
@@ -95,11 +96,10 @@ namespace consoleProject
 					if(new string(guessedWord) == wordToFind)	// verifie si toutes les lettres ont été trouvées
 					{
 						Console.WriteLine("Felicitations ! Vous avez gagné !\n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);
-						Utils.reloadask();
 						return;
 					}	
 				}
-				
+				Utils.reloadask();
 			}
 	}
 }

@@ -61,7 +61,7 @@ namespace consoleProject
 		public static void reloadask()
         {
             Console.Write("Voulez-vous rejouer ? O/n: ");
-            string ans = Console.ReadLine()!;
+            string ans = Console.ReadLine();
             if (ans.ToLower()=="o") Pendu.penduGame();
             else Environment.Exit(0);
         }

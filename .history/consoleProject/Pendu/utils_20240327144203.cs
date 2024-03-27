@@ -39,7 +39,7 @@ namespace consoleProject
 			return false;
 		}
 		
-		 public static string GetWord(string path = "C:/Users/felix/Documents/GitHub/test/C-_isitech/consoleProject/Pendu/word_bank.txt")
+		 public static string GetWord(string path = "../../Pendu/word_bank.txt")
 		{
 			if (!File.Exists(path))
 				throw new ArgumentException("Le fichier est introuvable : " + path);

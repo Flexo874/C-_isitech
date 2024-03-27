@@ -29,11 +29,12 @@ namespace consoleProject
 			for(int i = 0 ; i < tab.Length; i++)
 				check[i]=true;
 
-			for(int i = 0 ; i < tab.Length;i++)
-			{
+			for(int i = 0 ; i < tab.Length;i++){
 				a = rdm.Next(0,tab.Length);
+
 				while(!check[a])
 					a = rdm.Next(0,tab.Length) ;
+
 				check[a] = false;
 				result[i] = tab[a];
 			}

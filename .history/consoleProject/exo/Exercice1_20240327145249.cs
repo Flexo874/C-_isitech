@@ -51,8 +51,7 @@ namespace consoleProject
 			}
 			//Exo 4
 			public static void multiples(){
-				Console.Write("Veuillez saisir un nombre :");
-				if(!int.TryParse(Console.ReadLine(),out int num)) return;
+				int num = Convert.ToInt32(Console.ReadLine());
 				for (int i =1; i<=10;i++ )
 				{
 				int mult = num * i;
@@ -63,7 +62,7 @@ namespace consoleProject
 			public static void primaryNumSumm()
 			{
 				Console.Write("Veuillez saisir un nombre");
-				if(!int.TryParse(Console.ReadLine(),out int num)) return;
+				int num = Convert.ToInt32(Console.ReadLine());
 				int sum=1;
 				for(int i = 0; i <= num ; i++)
 				{

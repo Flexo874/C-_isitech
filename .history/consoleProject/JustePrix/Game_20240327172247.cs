@@ -13,12 +13,12 @@ namespace consoleProject
 			int toFind = rnd.Next(0,10001);
 			
 			//Mise en place de la presentation
-			Console.WriteLine("-------------------------------------------------");
+			Console.WriteLine("------------------------------------------------------------");
 			Console.WriteLine("          Voici le juste prix        ");
 			
 			//L'utilisateur chosit en combien de tours il veut jouer
 			int lap = GetInput();
-			Console.WriteLine("--------------------------------------------------");
+			Console.WriteLine("------------------------------------------------------------");
 			
 			while(lap > 0)
 			{

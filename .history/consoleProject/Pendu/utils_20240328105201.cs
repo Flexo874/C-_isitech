@@ -14,9 +14,6 @@ namespace consoleProject
 				Console.Write(new string(arr));
 		}
 		
-		
-		
-		//Fonction qui prends la lettre choisit par l'utilisateur et verifie qu'elle est valide
 		  public static char GetInput()
 		{
 			while(true)
@@ -33,7 +30,6 @@ namespace consoleProject
 			}
 		}
 		
-		//Fonction qui verifie si la lettre est presente dans une string
 		 public static bool ContainsLetter(char[] guessedWord, char letter)
 		{
 			int i = -1;
@@ -42,8 +38,6 @@ namespace consoleProject
 			return false;
 		}
 		
-		
-		//Fonction qui renvoie un mot au hasard dans une liste de mots
 		 public static string GetWord(string path = "Pendu/word_bank.txt")
 		{
 			if (!File.Exists(path))
@@ -62,7 +56,7 @@ namespace consoleProject
 		}
 		
 		
-		//Fonction qui demande a l'utilisateur s'il veut rejouer a la fin de la partie
+		
 		public static void reloadask()
 		{
 			Console.Write("Voulez-vous rejouer ? O/n: ");
@@ -80,11 +74,9 @@ namespace consoleProject
 		}
 		
 		
-		
-		//Fonction qui permet de quitter le jeu a tout moment si le joueur appui sur "q"
 		public static void Quit(char c)
 		{
-			if(c == 'q') 				
+			if(c == 'q') //si le joueur veut quitter				
 					{
 						Console.Write("Voulez-vous vraiment quitter? o/n : ");//On verifie si c'est q pour savoir si l'on quitte le jeu
 						if(Console.ReadKey().KeyChar == 'o' ) System.Environment.Exit(1) ;
@@ -93,11 +85,9 @@ namespace consoleProject
 		}
 		
 		
-		/*Fonction qui en fonction du nombre d'erreur print le bon schema du pendu
-		 */
 		public static void gameStatement(int round, string wordToFind)
 		{
-			switch (round)				
+			switch (round)				//met le bon schema de pendu en fonction des erreurs
 						{
 							case 1 :
 								Utils.printCase8();

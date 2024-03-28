@@ -1,4 +1,8 @@
 using System;
+using System.Collections;
+using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics.Arm;
+
 
 namespace consoleProject
 {
@@ -9,15 +13,33 @@ namespace consoleProject
 				int count =0;
 				Console.WriteLine("-------------------------------------");
 				Console.WriteLine("             Le Pendu !      ");
-				Console.WriteLine("-------------------------------------");
+				//L'utilisateur chosit en combien de tours il veut jouer
 				
-				//L'utilisateur chosit en combien de tours il veut jouers
+				Console.WriteLine("-------------------------------------");
 				int round = 8;
-				string wordToFind = Utils.GetWord();
-				int i = -1; 											 
-				char[] guessedWord = wordToFind.ToCharArray(); 			
-				while (++i < guessedWord.Length) guessedWord[i] = '_'; 
+				
+
+
+
+
+				/*
+				 *La liste de mots peut etre remplacée par la fonction Utils.GetWord()
+				 *qui prends un mot au hasard dans word_bank.txt	
+				 *Le problem est que je sais pas quel path mettre dans la fct
+				 */
+				
+				/**************************************************/
+				string[] word = ["apple", "banana", "carrot", "date", "egg", "fig", "grape", "honey", "kiwi", "lemon", "mango", "nut", "orange", "pear", "quince", "raspberry", "strawberry", "tangerine", "udon", "vanilla", "watermelon", "xigua", "yam", "zucchini"];
+				Random rdn = new Random();
+				string wordToFind = word[rdn.Next(0,word.Length)]; 
+				/**************************************************/
+				
+				int i = -1; 											 //On initialise l'index à -1
+				char[] guessedWord = wordToFind.ToCharArray(); 			//On transforme le mot a trouver en array
+				while (++i < guessedWord.Length) guessedWord[i] = '_'; //On remplace les lettres par "_"
 				Utils.printCase1();
+				
+				
 				while(round >= 0)
 				{
 					count++;																	//On augment le tours passés
@@ -28,7 +50,6 @@ namespace consoleProject
 					Utils.Quit(c);
 					Console.Clear();
 					Console.WriteLine("-------------------------------------");
-					
 					if(Utils.ContainsLetter(wordToFind.ToCharArray(),c)) //check si  la lettre est dans le mot ou pas
 					{
 						for(int a = 0 ; a < wordToFind.Length ; a++)	//remplace dans guessedword les '_' par la lettre
@@ -43,7 +64,8 @@ namespace consoleProject
 						round--; //retire 1 a la variable round pour dire que le tour est perdu
 						Console.WriteLine("La lettre n'est pas trouvé");
 					}
-					Utils.gameStatement(round,wordToFind); 
+					Utils.gameStatement(round); //affichage le pendu en fonction des erreurs
+					
 					if(new string(guessedWord) == wordToFind)	// verifie si toutes les lettres ont été trouvées
 					{
 						Console.WriteLine("Felicitations ! Vous avez gagné !\n Vous avez fait {0} tentatives. Le mot etait bien {1}",count,wordToFind);

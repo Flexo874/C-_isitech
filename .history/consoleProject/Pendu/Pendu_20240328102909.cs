@@ -9,14 +9,14 @@ namespace consoleProject
 				int count =0;
 				Console.WriteLine("-------------------------------------");
 				Console.WriteLine("             Le Pendu !      ");
-				Console.WriteLine("-------------------------------------");
+				//L'utilisateur chosit en combien de tours il veut jouer
 				
-				//L'utilisateur chosit en combien de tours il veut jouers
+				Console.WriteLine("-------------------------------------");
 				int round = 8;
 				string wordToFind = Utils.GetWord();
-				int i = -1; 											 
-				char[] guessedWord = wordToFind.ToCharArray(); 			
-				while (++i < guessedWord.Length) guessedWord[i] = '_'; 
+				int i = -1; 											 //On initialise l'index à -1
+				char[] guessedWord = wordToFind.ToCharArray(); 			//On transforme le mot a trouver en array
+				while (++i < guessedWord.Length) guessedWord[i] = '_'; //On remplace les lettres par "_"
 				Utils.printCase1();
 				while(round >= 0)
 				{

@@ -6,7 +6,7 @@ namespace consoleProject
 	{
 			public static void penduGame()
 			{
-				int count =0; //nombre de tentatives
+				int count =0;
 				Console.WriteLine("-------------------------------------");
 				Console.WriteLine("             Le Pendu !      ");
 				Console.WriteLine("-------------------------------------");
@@ -21,7 +21,7 @@ namespace consoleProject
 				Utils.printCase1();
 				while(round >= 0)
 				{
-					count++;																	
+																						
 					Console.WriteLine("Le mot a trouver est : {0} ",new string (guessedWord));
 					Console.WriteLine("Il vous reste {0}/7 chances !",round-1);
 					char c = Utils.GetInput();					//On obtient la lettre tapée par l'utilisateur

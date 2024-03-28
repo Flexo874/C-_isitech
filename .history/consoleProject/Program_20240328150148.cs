@@ -53,10 +53,8 @@ class Program
 		{
 			try
 			{
-				double notes = Convert.ToInt32(Console.ReadLine());
-				 if(notes < 0) 
-				 	throw new FormatException("Veuillez saisir une notes positive!");
-				return notes;
+				double nombreDeNotes = Convert.ToInt32(Console.ReadLine());
+				return nombreDeNotes;
 				
 			}
 			catch(FormatException)

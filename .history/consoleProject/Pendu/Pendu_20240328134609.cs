@@ -6,7 +6,7 @@ namespace consoleProject
 	{
 			public static void penduGame()
 			{
-				int count =0; //nombre de tentatives
+				int count =0;
 				Console.WriteLine("-------------------------------------");
 				Console.WriteLine("             Le Pendu !      ");
 				Console.WriteLine("-------------------------------------");

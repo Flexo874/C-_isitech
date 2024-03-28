@@ -10,53 +10,55 @@ class Program
 	{  
 		Console.WriteLine("Combien de notes souhaitez-vous entrer ?");
 		
-		
-	
 		int nombreDeNotes =0;
+		
 		while(true)
 		{
 			try
 			{
 				 nombreDeNotes = Convert.ToInt32(Console.ReadLine());
-				 if(nombreDeNotes < 0) 
-				 	throw new FormatException("Veuillez saisir un nombre positif");
 				break;
 			}
 			catch(FormatException)
 			{
-				Console.Error.WriteLine("Argument invalide! \n Combien de notes souhaitez-vous entrer ?"  );
+				Console.Error.WriteLine("Argument invalide! Veuillez saisir un nombre.");
 				continue;
 			}
 		}
 		
 		
+		
+		
+		
 		double[] notes = new double[nombreDeNotes];
-		string[] nom = new string [nombreDeNotes];
+
 		for (int i = 0; i < nombreDeNotes; i++)
 		{
 			Console.WriteLine($"Entrez la note {i + 1}:");
 			notes[i] = getInput();
-			Console.WriteLine("Entrez  le nom de l'élève: ");
-			nom[i]=Console.ReadLine()!;
 		}
 
 		double moyenne = CalculerMoyenne(notes);
 		Console.WriteLine($"La moyenne des notes est : {moyenne}");
 
 		Console.WriteLine("Les notes supérieures à la moyenne sont : ");
-		AfficherNotesSupérieures(notes, moyenne,nom);
+		AfficherNotesSupérieures(notes, moyenne);
+
+		
+	  
 	}
 	
-		 static double getInput()
+	
+	 
+		//Exo 1
+		public static double getInput()
 		{
 			while(true)
 		{
 			try
 			{
-				double notes = Convert.ToInt32(Console.ReadLine());
-				 if(notes < 0) 
-				 	throw new FormatException("Veuillez saisir une notes positive!");
-				return notes;
+				double nombreDeNotes = Convert.ToInt32(Console.ReadLine());
+				return nombreDeNotes;
 				
 			}
 			catch(FormatException)
@@ -76,28 +78,18 @@ class Program
 		return somme / notes.Length;
 	}
 
-	static int AfficherNotesSupérieures(double[] notes, double moyenne,string[] nom)
+	static int AfficherNotesSupérieures(double[] notes, double moyenne)
 	{
 		int count = 0;
-		for(int i = 0;i <  notes.Length; i++)
+		foreach (double note in notes)
 		{
-			if (notes[i] > moyenne)
+			if (note > moyenne)
 			{
-				Console.WriteLine("{0} : {1}",nom[i],notes[i]);
+				Console.WriteLine(note);
 				count++;
 			}
 		}
 		return count;
 	}
-	
-	 static void minNote (int[] tab){
-			int min = int.MaxValue;
-			for(int i = 0; i < tab.Length ; i++)
-			{
-				if(tab[i] < min )
-					min = tab[i];
-			}
-			Console.WriteLine("La note la plus basse est : {0}",min);
-		}
 }
 }

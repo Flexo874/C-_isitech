@@ -18,13 +18,11 @@ class Program
 			try
 			{
 				 nombreDeNotes = Convert.ToInt32(Console.ReadLine());
-				 if(nombreDeNotes < 0) 
-				 	throw new FormatException("Veuillez saisir un nombre positif");
 				break;
 			}
 			catch(FormatException)
 			{
-				Console.Error.WriteLine("Argument invalide! \n Combien de notes souhaitez-vous entrer ?"  );
+				Console.Error.WriteLine("Argument invalide!"  );
 				continue;
 			}
 		}
@@ -53,10 +51,8 @@ class Program
 		{
 			try
 			{
-				double notes = Convert.ToInt32(Console.ReadLine());
-				 if(notes < 0) 
-				 	throw new FormatException("Veuillez saisir une notes positive!");
-				return notes;
+				double nombreDeNotes = Convert.ToInt32(Console.ReadLine());
+				return nombreDeNotes;
 				
 			}
 			catch(FormatException)
@@ -89,15 +85,5 @@ class Program
 		}
 		return count;
 	}
-	
-	 static void minNote (int[] tab){
-			int min = int.MaxValue;
-			for(int i = 0; i < tab.Length ; i++)
-			{
-				if(tab[i] < min )
-					min = tab[i];
-			}
-			Console.WriteLine("La note la plus basse est : {0}",min);
-		}
 }
 }

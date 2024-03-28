@@ -23,7 +23,7 @@ namespace consoleProject
 				{
 					count++;																	
 					Console.WriteLine("Le mot a trouver est : {0} ",new string (guessedWord));
-					Console.WriteLine("Il vous reste {0}/7 chances !",round-1);
+					Console.WriteLine("Il vous reste {0}/7 chances !",round--);
 					char c = Utils.GetInput();					//On obtient la lettre tapée par l'utilisateur
 					Utils.Quit(c);
 					Console.Clear();

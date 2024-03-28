@@ -43,7 +43,7 @@ namespace consoleProject
 		}
 		
 		
-		//Fonction qui renvoie un mot au hasard dans une liste de mots en fonction de la difficulté chosie
+		//Fonction qui renvoie un mot au hasard dans une liste de mots
 		 public static string GetWord(int difficulty)
 		{
 			string easy = "Pendu/word_bank/easy.txt";
@@ -55,7 +55,8 @@ namespace consoleProject
 							:difficulty == 2
 							?advanced
 							:hard;
-			if (!(File.Exists(easy) || File.Exists(advanced) ||File.Exists(hard)) )
+			
+			if (!File.Exists(easy) || !File.Exists(advanced) ||!File.Exists(hard) )
 				throw new ArgumentException("Le fichier est introuvable.");
 			try
 			{
@@ -95,11 +96,8 @@ namespace consoleProject
 			if(c == 'q') 				
 					{
 						Console.Write("Voulez-vous vraiment quitter? o/n : ");//On verifie si c'est q pour savoir si l'on quitte le jeu
-						if(Console.ReadKey().KeyChar == 'o' ) 
-							{
-								Console.Clear();
-								System.Environment.Exit(1) ;
-							}	
+						if(Console.ReadKey().KeyChar == 'o' ) System.Environment.Exit(1) ;
+						
 					}
 		}
 		
@@ -142,7 +140,7 @@ namespace consoleProject
 		
 		
 		
-		//Menu qui prends en entree un chiffre entre 1 et 4  pour choisir la difficulté ou quitter
+		
 		public static int Menu()
 		{
 			Console.Clear();
@@ -161,13 +159,10 @@ namespace consoleProject
 			switch(choice)
 			{
 				case  1 :
-					Console.Clear();
 					return 1;
 				case  2 : 
-					Console.Clear();
 					return 2;
 				case  3 :
-					Console.Clear();
 					return 3;
 				case  4 :
 					Quit('q');

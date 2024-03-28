@@ -17,7 +17,8 @@ namespace consoleProject
 				
 				
 				
-				string wordToFind =Utils.GetWord(Utils.Menu());
+				string wordToFind ="";
+				//Utils.GetWord();
 				
 				
 				int round = 8;

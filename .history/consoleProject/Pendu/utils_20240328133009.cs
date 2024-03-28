@@ -142,7 +142,7 @@ namespace consoleProject
 		
 		
 		
-		//Menu qui prends en entree un chiffre entre 1 et 4  pour choisir la difficulté ou quitter
+		
 		public static int Menu()
 		{
 			Console.Clear();

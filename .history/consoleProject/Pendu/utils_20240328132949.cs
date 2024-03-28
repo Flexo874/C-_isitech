@@ -43,7 +43,7 @@ namespace consoleProject
 		}
 		
 		
-		//Fonction qui renvoie un mot au hasard dans une liste de mots en fonction de la difficulté chosie
+		//Fonction qui renvoie un mot au hasard dans une liste de mots
 		 public static string GetWord(int difficulty)
 		{
 			string easy = "Pendu/word_bank/easy.txt";
@@ -142,7 +142,7 @@ namespace consoleProject
 		
 		
 		
-		//Menu qui prends en entree un chiffre entre 1 et 4  pour choisir la difficulté ou quitter
+		
 		public static int Menu()
 		{
 			Console.Clear();

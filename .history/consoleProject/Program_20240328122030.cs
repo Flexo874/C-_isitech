@@ -8,7 +8,8 @@ class Program
 {
 	static void Main(string[] args)
 	{  
-		Pendu.penduGame();	
+		Console.WriteLine(Utils.GetWord(Utils.Menu()));
+		
 
 
 		
